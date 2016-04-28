@@ -1,0 +1,134 @@
+/* CSS Reset & Global typography styling */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* End CSS Reset & Global typography styling */
+html {
+  height: 100%; }
+
+body {
+  background: #b29c8d;
+  background: -moz-linear-gradient(top, #b29c8d 0%, #ede0dd 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #b29c8d), color-stop(100%, #ede0dd));
+  background: -webkit-linear-gradient(top, #b29c8d 0%, #ede0dd 100%);
+  background: -o-linear-gradient(top, #b29c8d 0%, #ede0dd 100%);
+  background: -ms-linear-gradient(top, #b29c8d 0%, #ede0dd 100%);
+  background: linear-gradient(to bottom, #b29c8d 0%, #ede0dd 100%); }
+
+img {
+  max-width: 100%;
+  border: 0;
+  transition: all 600ms ease;
+  display: block; }
+
+.container {
+  max-width: 496px;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.left-eye {
+  position: absolute;
+  top: 248px;
+  left: 267px; }
+
+.right-eye {
+  position: absolute;
+  top: 254px;
+  left: 59px; }
+
+.nose {
+  position: absolute;
+  top: 303px;
+  left: 106px; }
+
+.mouth {
+  position: absolute;
+  top: 431px;
+  left: 107px; }
+
+@media (max-width: 1023px) {
+  .face {
+    max-width: calc(100% / 2);
+    transform: scale(2, 1) translateX(calc(100% / 4));
+    transform-origin: bottom center; }
+
+  .left-eye {
+    top: 100px; }
+
+  .right-eye {
+    top: 106px; }
+
+  .nose {
+    top: 80px; }
+
+  .mouth {
+    top: 200px; } }
+@media (max-width: 640px) {
+  .face {
+    transform: scale(2, 0.6) translateX(calc(100% / 4)); }
+
+  .left-eye {
+    opacity: 0; }
+
+  .right-eye {
+    top: 52%;
+    left: 8%;
+    max-width: 25%; }
+
+  .nose {
+    top: 50%;
+    left: 20%;
+    z-index: 10;
+    max-width: 32%; }
+
+  .mouth {
+    top: 60%;
+    left: 48%;
+    max-width: 40%; } }
+@media (max-width: mobile-landscape) {
+  .face {
+    transform: scale(2, 0.6) translateX(calc(100% / 4)); }
+
+  .left-eye {
+    opacity: 0; }
+
+  .right-eye {
+    top: 52%;
+    left: 8%;
+    max-width: 25%; }
+
+  .nose {
+    top: 50%;
+    left: 20%;
+    z-index: 10;
+    max-width: 32%; }
+
+  .mouth {
+    top: 60%;
+    left: 48%;
+    max-width: 40%; } }
+@media (max-width: 480px) {
+  .left-eye {
+    display: none; } }
+@media (max-width: 320px) {
+  .face {
+    transform: scale(1.3, 2) translateX(calc(100% / 2.6)); }
+
+  .right-eye {
+    top: -32%;
+    left: 31%;
+    max-width: 35%; }
+
+  .nose {
+    top: -4%;
+    left: 27%;
+    max-width: 42%; }
+
+  .mouth {
+    top: 24%;
+    left: 26%;
+    max-width: 45%; } }

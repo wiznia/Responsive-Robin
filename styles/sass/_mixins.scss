@@ -1,0 +1,51 @@
+@mixin translate($X, $Y) {
+	transform: translate($X, $Y); 
+	-moz-transform: translate($X, $Y);
+	-webkit-transform: translate($X, $Y);
+	-ms-transform: translate($X, $Y);
+}
+
+@mixin translateY($Y) {
+	transform: translateY($Y); 
+	-moz-transform: translateY($Y);
+	-webkit-transform: translateY($Y);
+	-ms-transform: translateY($Y);
+}
+
+@mixin translateX($X) {
+	transform: translateX($X); 
+	-moz-transform: translateX($X);
+	-webkit-transform: translateX($X);
+	-ms-transform: translateX($X);
+}
+
+@mixin scale($scale...) {
+	transform: scale($scale); 
+	-moz-transform: scale($scale);
+	-webkit-transform: scale($scale);
+	-ms-transform: scale($scale);
+}
+
+@mixin at-breakpoint($breakpoint) {
+	@if $breakpoint == mobile-landscape {
+		@media (max-width: 640px)  { @content; }
+	}
+	@if $breakpoint == tablet-portrait {
+		@media (max-width: 767px)  { @content; }
+	}
+	@else if $breakpoint == tablet-landscape {
+		@media (max-width: 1023px) { @content; }
+	}
+	@else if $breakpoint == desktop-medium {
+		@media (max-width: 1279px) { @content; }
+	}
+	@else if $breakpoint == desktop {
+		@media (max-width: 1439px) { @content; }
+	}
+	@else if $breakpoint == desktop-large {
+    	@media (min-width: 1440px) { @content; }
+  	} 
+  	@else {
+  		@media (max-width: $breakpoint) { @content; }
+  	}
+}
